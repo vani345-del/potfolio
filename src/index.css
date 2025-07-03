@@ -1,0 +1,175 @@
+/* ========= tailwind.css ========= */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ────────────────────────────────
+   Design system — Cosmic theme
+   ────────────────────────────────*/
+@layer base {
+  :root {
+    --background: 218 23% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 218 23% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 218 23% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263 70% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32.6% 17.5%;
+    --input: 217 32.6% 17.5%;
+    --ring: 263 70% 50%;
+
+    --radius: 0.75rem;
+
+    --cosmic-glow: 263 70% 50%;
+    --cosmic-secondary: 220 70% 50%;
+    --cosmic-accent: 280 70% 60%;
+  }
+}
+
+@layer base {
+  /* Global reset: remove implicit padding/width quirks */
+  * {
+    @apply box-border;           /* ✅ keeps sizing predictable */
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ────────────────────────────────
+   Component layer
+   ────────────────────────────────*/
+@layer components {
+  .cosmic-gradient {
+  background: linear-gradient(
+    135deg,
+    #1a1a1a 0%,     /* dark gray */
+    #2a2a2a 50%,    /* medium */
+    #3a3a3a 100%    /* lighter gray */
+  );
+}
+
+  .glass-card {
+    background: rgba(255 255 255 / 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255 255 255 / 0.1);
+    box-shadow: 0 8px 32px rgba(0 0 0 / 0.3);
+  }
+
+  .glow-effect {
+    box-shadow:
+      0 0 20px rgba(147 51 234 / 0.3),
+      0 0 40px rgba(147 51 234 / 0.2),
+      0 0 80px rgba(147 51 234 / 0.1);
+  }
+
+  .text-glow {
+    text-shadow:
+      0 0 10px rgba(147 51 234 / 0.5),
+      0 0 20px rgba(147 51 234 / 0.3),
+      0 0 40px rgba(147 51 234 / 0.1);
+  }
+
+  .floating-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(147 51 234 / 0.3) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    @apply flex flex-col items-center justify-center;
+
+    background: linear-gradient(
+      135deg,
+      hsl(218 23% 8%) 0%,
+      hsl(263 70% 15%) 50%,
+      hsl(280 70% 20%) 100%
+    );
+  }
+
+  .progress-container {
+    width: 300px;
+    height: 4px;
+    background: rgba(255 255 255 / 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 2rem;
+  }
+
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(
+      90deg,
+      hsl(263 70% 50%) 0%,
+      hsl(280 70% 60%) 100%
+    );
+    box-shadow: 0 0 10px rgba(147 51 234 / 0.8);
+  }
+}
+
+/* ────────────────────────────────
+   Utility layer
+   ────────────────────────────────*/
+@layer utilities {
+  .bg-background       { background-color: hsl(var(--background)); }
+  .text-foreground      { color: hsl(var(--foreground)); }
+  .font-inter           { font-family: 'Inter', sans-serif; }
+
+  .animate-float        { animation: float 6s ease-in-out infinite; }
+  .animate-pulse-glow   { animation: pulse-glow 2s ease-in-out infinite alternate; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-20px); }
+  }
+
+  @keyframes pulse-glow {
+    from { box-shadow: 0 0 20px rgba(147 51 234 / 0.3); }
+    to   { box-shadow: 0 0 30px rgba(147 51 234 / 0.6),
+                   0 0 40px rgba(147 51 234 / 0.4); }
+  }
+
+  /* ─── Optional debugging helper ─── */
+  /* 
+  .debug * {
+    @apply border border-red-500;
+  }
+  */
+}
+/* ========= end tailwind.css ========= */
