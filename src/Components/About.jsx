@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import profileImage from '../assets/profile.png';
+import pic from '../assets/pic1.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -106,10 +106,10 @@ const About = () => {
             <div className="relative lg:translate-x-12">
               <div className="w-80 h-80 mx-auto lg:mx-0 rounded-full glass-card p-2 glow-effect hover:scale-105 transition-all duration-500">
                 <img
-                  src={profileImage}
-                  alt="Vani - Web Developer"
-                  className="w-full h-full object-cover rounded-full"
-                />
+  src={pic}
+  alt="Vani - Web Developer"
+  className="w-full h-full object-cover rounded-full brightness-100"
+/>
               </div>
               <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl animate-pulse-glow"></div>
             </div>

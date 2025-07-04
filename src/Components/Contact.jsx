@@ -73,6 +73,11 @@ const Contact = () => {
         >
           Get In Touch
         </h2>
+        
+        <p className="text-lg text-center text-white/80 mb-10">
+          Interested in a modern, high-quality website or digital solution? <br />
+          Reach out to me for web development, collaboration, or any project inquiries. I’m always excited to help bring your ideas to life!
+        </p>
 
         <div className="glass-card p-8 rounded-2xl space-y-6" ref={contactInfoRef}>
           <div className="contact-info-item flex items-center gap-4">
@@ -87,8 +92,8 @@ const Contact = () => {
 
           <div className="contact-info-item flex items-center gap-4">
             <InstagramLogo size={24} className="text-purple-400" />
-            <a href="https://www.instagram.com/_vani_bodasingu/" target="_blank" rel="noopener noreferrer" className="text-lg hover:underline">
-              _vani_bodasingu
+            <a href="https://www.instagram.com/vaniwebdeveloper/" target="_blank" rel="noopener noreferrer" className="text-lg hover:underline">
+             vaniwebdeveloper
             </a>
           </div>
         </div>
