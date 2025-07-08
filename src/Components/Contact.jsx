@@ -92,8 +92,8 @@ const Contact = () => {
 
           <div className="contact-info-item flex items-center gap-4">
             <InstagramLogo size={24} className="text-purple-400" />
-            <a href="https://www.instagram.com/vaniwebdeveloper/" target="_blank" rel="noopener noreferrer" className="text-lg hover:underline">
-             vaniwebdeveloper
+            <a href="https://www.instagram.com/freelance_webdeveloperr/" target="_blank" rel="noopener noreferrer" className="text-lg hover:underline">
+             freelance_webdeveloperr
             </a>
           </div>
         </div>
