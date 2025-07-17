@@ -6,6 +6,10 @@ import project_1 from '../assets/project-1.png';
 import project_2 from '../assets/project-2.png';
 import project_3 from '../assets/project-3.png';
 import project_4 from '../assets/project-4.png';
+import gym from '../assets/gym.png';
+import dance from '../assets/dance.png';
+import hospital from '../assets/hospital.png';
+
 // Example image, replace with actual paths
 
 gsap.registerPlugin(ScrollTrigger);
@@ -28,11 +32,28 @@ const Project = () => {
       title: "Chemeleon",
       description: "Interactive website with dynamic color themes and animations",
       image: project_2,
-      tech: ["React", "CSS3", "Node.js"],
+      tech: ["React", "TailwindCss", "Node.js"],
       link: "https://chameleon-jxif.vercel.app/"
     },
     {
       id: 3,
+      title: "GYM",
+      image: gym,
+      description: "Responsive gym website with modern design and smooth animations",
+      tech: ["React", "CSS3"],
+      link: "https://chameleon-jxif.vercel.app/"
+    },
+    {
+      id: 4,
+      title: "Dance Studio",
+      description: "Responsive dance studio website with smooth animations and booking features",
+      image:dance,
+      tech: ["React", "CSS3"],
+      link: "https://chameleon-jxif.vercel.app/"
+    },
+
+    {
+      id: 5,
       title: "Painter website",
       description:"Elegant portfolio website for a painter with smooth animations",
       image: project_3,
@@ -40,11 +61,19 @@ const Project = () => {
       link: "https://painter-website-ebon.vercel.app/"
     },
     {
-      id: 4,
+      id: 6,
       title: "Suby Family Restaurant",
       description: "Responsive restaurant website with a modern design and smooth transitions",
       image: project_4,
       tech: ["React", "Tailwind CSS", "Node.js"],
+      link: "https://client-side-frontend.vercel.app/"
+    },
+    {
+      id: 7,
+      title: "Hospital ",
+      description: 'Responsive hospital website with a clean design and user-friendly interface',
+      image: hospital,
+      tech: ["React", "Tailwind CSS"],
       link: "https://client-side-frontend.vercel.app/"
     },
    
