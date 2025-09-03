@@ -10,8 +10,6 @@ import gym from '../assets/gym.png';
 import dance from '../assets/dance.png';
 import hospital from '../assets/hospital.png';
 
-// Example image, replace with actual paths
-
 gsap.registerPlugin(ScrollTrigger);
 
 const Project = () => {
@@ -47,11 +45,10 @@ const Project = () => {
       id: 4,
       title: "Dance Studio",
       description: "Responsive dance studio website with smooth animations and booking features",
-      image:dance,
+      image: dance,
       tech: ["React", "CSS3"],
       link: "https://dancepage.vercel.app/"
     },
-
     {
       id: 5,
       title: "Painter website",
@@ -76,7 +73,6 @@ const Project = () => {
       tech: ["React", "Tailwind CSS"],
       link: "https://samplesite-bice.vercel.app/"
     },
-   
   ];
 
   useEffect(() => {
@@ -133,9 +129,13 @@ const Project = () => {
         
         <div className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <div 
+            <a
               key={project.id}
-              className="project-card glass-card rounded-2xl overflow-hidden hover:glow-effect transition-all duration-500 hover:scale-105 group"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-card glass-card rounded-2xl overflow-hidden hover:glow-effect transition-all duration-500 hover:scale-105 group block focus:outline-none focus:ring-2 focus:ring-purple-500"
+              aria-label={`Open ${project.title} project in new tab`}
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -165,12 +165,12 @@ const Project = () => {
                     </span>
                   ))}
                 </div>
-                
-                <button className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform">
-                 
-                </button>
+                <span className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform">
+                  <ArrowUpRight size={20} />
+                  <span className="sr-only">View Project</span>
+                </span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
@@ -179,3 +179,4 @@ const Project = () => {
 };
 
 export default Project;
+
