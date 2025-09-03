@@ -25,7 +25,7 @@ const Project = () => {
       description: "Immersive VR experience showcasing futuristic clothing designs",
       image: project_1,
       tech: ["React", "Node.js"],
-      link: ""
+      link: "https://vr-clothing-house-z7tm.vercel.app/"
     },
     {
       id: 2,
@@ -41,7 +41,7 @@ const Project = () => {
       image: gym,
       description: "Responsive gym website with modern design and smooth animations",
       tech: ["React", "CSS3"],
-      link: "https://chameleon-jxif.vercel.app/"
+      link: "https://gym-sample-chi.vercel.app/"
     },
     {
       id: 4,
@@ -49,7 +49,7 @@ const Project = () => {
       description: "Responsive dance studio website with smooth animations and booking features",
       image:dance,
       tech: ["React", "CSS3"],
-      link: "https://chameleon-jxif.vercel.app/"
+      link: "https://dancepage.vercel.app/"
     },
 
     {
@@ -74,7 +74,7 @@ const Project = () => {
       description: 'Responsive hospital website with a clean design and user-friendly interface',
       image: hospital,
       tech: ["React", "Tailwind CSS"],
-      link: "https://client-side-frontend.vercel.app/"
+      link: "https://samplesite-bice.vercel.app/"
     },
    
   ];
