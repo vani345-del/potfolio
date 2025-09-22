@@ -80,10 +80,7 @@ const Contact = () => {
         </p>
 
         <div className="glass-card p-8 rounded-2xl space-y-6" ref={contactInfoRef}>
-          <div className="contact-info-item flex items-center gap-4">
-            <Phone size={24} className="text-purple-400" />
-            <span className="text-lg">whatsapp me or call me:+91 6281303917</span>
-          </div>
+          
 
           <div className="contact-info-item flex items-center gap-4">
             <EnvelopeSimple size={24} className="text-purple-400" />
