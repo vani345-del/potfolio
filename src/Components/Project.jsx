@@ -9,6 +9,7 @@ import project_4 from '../assets/project-4.png';
 import gym from '../assets/gym.png';
 import dance from '../assets/dance.png';
 import hospital from '../assets/hospital.png';
+import step from '../assets/step.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,8 +18,16 @@ const Project = () => {
   const titleRef = useRef(null);
 
   const projects = [
-    {
+     {
       id: 1,
+      title:"StepforwardX",
+      description: "Immersive project of Lms Project that includes updated ui and may fuctionalities",
+      image: step,
+      tech: ["React", "Node.js,Mongodb"],
+      link: "https://lms-projectfinal-1.onrender.com/"
+    },
+    {
+      id: 2,
       title:"VR Clothing House",
       description: "Immersive VR experience showcasing futuristic clothing designs",
       image: project_1,
@@ -26,7 +35,7 @@ const Project = () => {
       link: "https://vr-clothing-house-z7tm.vercel.app/"
     },
     {
-      id: 2,
+      id: 3,
       title: "Chemeleon",
       description: "Interactive website with dynamic color themes and animations",
       image: project_2,
@@ -34,7 +43,7 @@ const Project = () => {
       link: "https://chameleon-jxif.vercel.app/"
     },
     {
-      id: 3,
+      id: 4,
       title: "GYM",
       image: gym,
       description: "Responsive gym website with modern design and smooth animations",
@@ -42,7 +51,7 @@ const Project = () => {
       link: "https://gym-sample-chi.vercel.app/"
     },
     {
-      id: 4,
+      id: 5,
       title: "Dance Studio",
       description: "Responsive dance studio website with smooth animations and booking features",
       image: dance,
@@ -50,7 +59,7 @@ const Project = () => {
       link: "https://dancepage.vercel.app/"
     },
     {
-      id: 5,
+      id: 6,
       title: "Painter website",
       description:"Elegant portfolio website for a painter with smooth animations",
       image: project_3,
@@ -58,7 +67,7 @@ const Project = () => {
       link: "https://painter-website-ebon.vercel.app/"
     },
     {
-      id: 6,
+      id: 7,
       title: "Suby Family Restaurant",
       description: "Responsive restaurant website with a modern design and smooth transitions",
       image: project_4,
@@ -66,7 +75,7 @@ const Project = () => {
       link: "https://client-side-frontend.vercel.app/"
     },
     {
-      id: 7,
+      id: 8,
       title: "Hospital ",
       description: 'Responsive hospital website with a clean design and user-friendly interface',
       image: hospital,

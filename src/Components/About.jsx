@@ -18,6 +18,7 @@ const About = () => {
     { name: 'React', icon: '⚛️' },
     { name: 'GSAP', icon: '🚀' },
     { name: 'Node.js', icon: '🔧' },
+    {name:'MongoDB',icon:'💻'}
   ];
 
   useEffect(() => {
